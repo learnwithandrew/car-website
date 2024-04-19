@@ -9,8 +9,11 @@ function searchCar(searchItem) {
 }
 
 
-function sortCars() {
-
+function sortCars(carsCopy) {
+    carsCopy = cars.slice();
+    carsCopy.sort();
+    return carsCopy;
 }
 
 console.log(searchCar('suv suv'));
+console.log(sortCars(cars));
