@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     modalInfo.innerHTML = `
                     <img src="${car.carImage}" alt="${car.carName}" />
                     <h5>${car.carName}</h5>
+                    <p>${car.carDetails}</p>
                     `;
                 };
                 carClose.onclick = () => {
@@ -55,6 +56,5 @@ document.addEventListener('DOMContentLoaded', () => {
             pickItem(car.id);
         })
     }
-
     displayCars();
 });
