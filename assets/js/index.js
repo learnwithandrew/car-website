@@ -39,7 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
              <img src="${car.carImage}" alt="${car.carName}" />
              <h5>${car.carName}</h5>
             `;
-            carContainer.appendChild(carCard);
             let pickItem = () => {
                 carCard.onclick = () => {
                     carClick.style.display = "block";
@@ -54,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
             pickItem(car.id);
+            carContainer.appendChild(carCard);
         })
     }
     displayCars();
