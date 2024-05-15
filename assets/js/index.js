@@ -31,7 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let displayCars = () => {
         let carClick = document.getElementById('myModal');
         let carClose = document.getElementById('modal-close');
-        let modalInfo = document.getElementById('modal-info');
+        let carImage = document.getElementById('modalImage-container');
+        let carInformation = document.getElementById('carModal-information')
         // let carReferenceHeader = document.getElementById('carReference-heading');
 
         cars.map((car) => {
@@ -44,10 +45,10 @@ document.addEventListener('DOMContentLoaded', () => {
             let pickItem = () => {
                 let openCarModal = () => {
                     carClick.style.display = "block";
-                    modalInfo.innerHTML = `
-                    <h5>${car.carName}</h5>
-                    <img src="${car.carImage}" alt="${car.carName}" />
-                    <p>${car.carDetails}</p>
+                    carImage.innerHTML = `<img src="${car.carImage}" alt="${car.carName}" />`;
+                    carInformation.innerHTML = `
+                        <h5>${car.carName}</h5>
+                        <p>${car.carDetails}</p>
                     `;
                 };
                 let closeCarModal = () => {
