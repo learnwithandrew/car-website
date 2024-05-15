@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     let carContainer = document.getElementById('car-cards');
+    // let categorySection = document.getElementById('category-section');
     let cars = [
         {
             id: 1,
@@ -30,7 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let displayCars = () => {
         let carClick = document.getElementById('myModal');
         let carClose = document.getElementById('modal-close');
-        let modalInfo = document.getElementById('modal-info')
+        let modalInfo = document.getElementById('modal-info');
+        // let carReferenceHeader = document.getElementById('carReference-heading');
 
         cars.map((car) => {
             let carCard = document.createElement('div');
@@ -43,8 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 let openCarModal = () => {
                     carClick.style.display = "block";
                     modalInfo.innerHTML = `
-                    <img src="${car.carImage}" alt="${car.carName}" />
                     <h5>${car.carName}</h5>
+                    <img src="${car.carImage}" alt="${car.carName}" />
                     <p>${car.carDetails}</p>
                     `;
                 };

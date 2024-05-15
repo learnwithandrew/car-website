@@ -108,24 +108,69 @@ form button {
 
 .carModal-content {
     background-color: #fefefe;
-    margin: 5% auto;
+    margin: 0 auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
 }
 
 .carModal-content .close {
     color: #aaa;
     float: left;
     font-size: 28px;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .carModal-content .close:hover,
 .close:focus {
     color: black;
-    text-decoration: none;
     cursor: pointer;
+}
+
+.modal-info {
+    max-width: 600px;
+    margin-left: 30px;
+    width: 600px;
+}
+
+.modal-info h5 {
+    padding-top: 2rem;
+    font-size: 22px;
+}
+
+.modal-info img {
+    width: 100%;
+    max-width: 100%;
+}
+
+.modify-buttons {
+    margin-top: 18px;
+    margin-left: 20px;
+}
+
+.modify-buttons #delete-button {
+    width: 140px;
+    border-radius: 10px;
+    padding: 5px;
+    outline: none;
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: 500;
+    background-color: red;
+    color: #fff;
+}
+
+.modify-buttons #edit-button {
+    width: 140px;
+    border-radius: 10px;
+    padding: 5px;
+    border: 0.5px solid #000;
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: 500;
 }
 
 /* large screens */
