@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
              <h5>${car.carName}</h5>
             `;
             let pickItem = () => {
-                carCard.onclick = () => {
+                let openCarModal = () => {
                     carClick.style.display = "block";
                     modalInfo.innerHTML = `
                     <img src="${car.carImage}" alt="${car.carName}" />
@@ -48,9 +48,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     <p>${car.carDetails}</p>
                     `;
                 };
-                carClose.onclick = () => {
+                let closeCarModal = () => {
                     carClick.style.display = "none";
                 }
+                carCard.addEventListener('click', openCarModal);
+                carClose.addEventListener('click', closeCarModal);
             }
             pickItem(car.id);
             carContainer.appendChild(carCard);
