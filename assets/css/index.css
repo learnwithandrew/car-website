@@ -139,3 +139,24 @@ form button {
     text-decoration: none;
     cursor: pointer;
 }
+
+/* large screens */
+@media only screen and (max-device-width: 1025px) {
+    .car-cards .card {
+        flex-basis: 22%;
+    }
+}
+
+/* tablet devices */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .car-cards .card {
+        flex-basis: 48%;
+    }
+}
+
+/* mobile devices */
+@media only screen and (max-device-width: 767px) {
+    .car-cards .card {
+        flex-basis: 100%;
+    }
+}
