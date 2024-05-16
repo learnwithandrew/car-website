@@ -1,34 +1,61 @@
 {
-  "cars": [
-    {
-      "id": "1",
-      "carName": "Sports car",
-      "carImage": "/assets/images/sports-car_prev_ui.png",
-      "carDetails": "This is a sports car."
-    },
-    {
-      "id": "2",
-      "carName": "Electric car",
-      "carImage": "/assets/images/tesla_prev_ui.png",
-      "carDetails": "This is an electric car."
-    },
-    {
-      "id": "3",
-      "carName": "Minivan car",
-      "carImage": "/assets/images/minivan_prev_ui.png",
-      "carDetails": "This is a minivan car."
-    },
-    {
-      "id": "4",
-      "carName": "Convertible car",
-      "carImage": "/assets/images/convertible_prev_ui.png",
-      "carDetails": "This is a convertible car."
-    },
-    {
-      "id": "3b6a",
-      "carName": "Formula One Car",
-      "carImage": "https://robbreport.com/wp-content/uploads/2024/02/RR_2024_F1_Car_Roundup_Red_Bull_RB20.jpg?w=800",
-      "carDetails": "This is a F1 car"
-    }
-  ]
+    "cars": [
+        {
+            "id": "1",
+            "categoryId": 1,
+            "carName": "Sports car",
+            "carImage": "/assets/images/sports-car_prev_ui.png",
+            "carDetails": "This is a sports car."
+        },
+        {
+            "id": "2",
+            "categoryId": 2,
+            "carName": "Electric car",
+            "carImage": "/assets/images/tesla_prev_ui.png",
+            "carDetails": "This is an electric car."
+        },
+        {
+            "id": "3",
+            "categoryId": 3,
+            "carName": "Minivan car",
+            "carImage": "/assets/images/minivan_prev_ui.png",
+            "carDetails": "This is a minivan car."
+        },
+        {
+            "id": "4",
+            "categoryId": 4,
+            "carName": "Convertible car",
+            "carImage": "/assets/images/convertible_prev_ui.png",
+            "carDetails": "This is a convertible car."
+        },
+        {
+            "id": "3b6a",
+            "categoryId": 1,
+            "carName": "Formula One Car",
+            "carImage": "https://robbreport.com/wp-content/uploads/2024/02/RR_2024_F1_Car_Roundup_Red_Bull_RB20.jpg?w=800",
+            "carDetails": "This is a F1 car"
+        }
+    ],
+    "categories": [
+        {
+            "id": 1,
+            "categoryName": "Sports Car",
+            "categoryImage": "/assets/images/sports-car_prev_ui.png"
+        },
+        {
+            "id": 2,
+            "categoryName": "Electric Car",
+            "categoryImage": "/assets/images/tesla_prev_ui.png"
+        },
+        {
+            "id": 3,
+            "categoryName": "Minivan Car",
+            "categoryImage": "/assets/images/minivan_prev_ui.png"
+        },
+        {
+            "id": 4,
+            "categoryName": "Convertible Car",
+            "categoryImage": "/assets/images/convertible_prev_ui.png"
+        }
+    ]
 }

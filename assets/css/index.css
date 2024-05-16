@@ -190,13 +190,18 @@ form button {
     font-weight: 500;
 }
 
-.carImage-upload {
-    border: 1px solid grey;
-    margin-bottom: 10px;
+.carSubmit-form input[type="text"],
+textarea {
+    padding-left: 8px;
 }
 
 .carImage-upload:hover {
     border: 1px solid grey;
+}
+
+#car-category {
+    width: 100%;
+    margin-bottom: 12px;
 }
 
 /* large screens */
