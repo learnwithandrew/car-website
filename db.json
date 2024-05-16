@@ -40,6 +40,18 @@
       "carName": "Bughatti",
       "carImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Bugatti_Chiron_1.jpg/800px-Bugatti_Chiron_1.jpg",
       "carDetails": "This is a bughatti"
+    },
+    {
+      "id": "e446",
+      "carName": "Mercedes Benz",
+      "carImage": "https://www.mercedes-benz-kenya.com/media/domain/pages/slides/graph/889-wallpaper.jpg",
+      "carDetails": "This is a benz."
+    },
+    {
+      "id": "4b05",
+      "carName": "Tesla CyberTruck",
+      "carImage": "https://media-cldnry.s-nbcnews.com/image/upload/rockcms/2024-04/240419-tesla-cybertruck-al-0821-5e2b2b.jpg",
+      "carDetails": "This is a tesla cybertruck."
     }
   ],
   "categories": [

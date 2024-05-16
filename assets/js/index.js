@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
             })
     }
 
-    carForm.addEventListener('submit', (e) => {
+    let carPostForm = (e) => {
         e.preventDefault();
 
         const carName = carFormName.value;
@@ -71,10 +71,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(newCarItem)
-        })
-            .then(response => response.json())
-            .then(car => console.log(car))
-    });
+        }).then(response => response.json()).then(car)
+    }
+
+    carForm.addEventListener('submit', carPostForm);
     displayAllCars();
     getAllSportsCars(1);
 
