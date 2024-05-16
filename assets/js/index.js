@@ -1,69 +1,83 @@
 document.addEventListener('DOMContentLoaded', () => {
-    let carContainer = document.getElementById('car-cards');
-    // let categorySection = document.getElementById('category-section');
-    // let cars = [
-    //     {
-    //         id: 1,
-    //         carName: "Sports car",
-    //         carImage: "/assets/images/sports-car_prev_ui.png",
-    //         carDetails: "This is a sports car."
-    //     },
-    //     {
-    //         id: 2,
-    //         carName: "Electric car",
-    //         carImage: "/assets/images/tesla_prev_ui.png",
-    //         carDetails: "This is an electric car."
-    //     },
-    //     {
-    //         id: 3,
-    //         carName: "Minivan car",
-    //         carImage: "/assets/images/minivan_prev_ui.png",
-    //         carDetails: "This is a minivan car."
-    //     },
-    //     {
-    //         id: 4,
-    //         carName: "Convertible car",
-    //         carImage: "/assets/images/convertible_prev_ui.png",
-    //         carDetails: "This is a convertible car."
-    //     }
-    // ]
+    let carCategoryContainer = document.getElementById('car-cards');
+    let carFormImage = document.getElementById('car-image');
+    let carFormDetails = document.getElementById('car-details');
+    let carFormName = document.getElementById('car-name');
+    let carForm = document.getElementById('carSubmit-form');
 
-    let displayCars = () => {
+    let displayDifferentCars = () => {
         let carClick = document.getElementById('myModal');
         let carClose = document.getElementById('modal-close');
         let carImage = document.getElementById('modalImage-container');
-        let carInformation = document.getElementById('carModal-information')
-        // let carReferenceHeader = document.getElementById('carReference-heading');
-        fetch('http://localhost:3000/cars')
-            .then(response => response.json())
-            .then((data) => {
-                let cars = data;
-                cars.map((car) => {
-                    let carCard = document.createElement('div');
-                    carCard.classList.add('card');
-                    carCard.innerHTML = `
-                     <img src="${car.carImage}" alt="${car.carName}" />
-                     <h5>${car.carName}</h5>
-                    `;
-                    let pickItem = () => {
-                        let openCarModal = () => {
-                            carClick.style.display = "block";
-                            carImage.innerHTML = `<img src="${car.carImage}" alt="${car.carName}" />`;
-                            carInformation.innerHTML = `
-                                <h5>${car.carName}</h5>
-                                <p>${car.carDetails}</p>
-                            `;
-                        };
-                        let closeCarModal = () => {
-                            carClick.style.display = "none";
+        let carInformation = document.getElementById('carModal-information');
+
+        let displayAllCars = () => {
+            fetch('http://localhost:3000/cars')
+                .then(response => response.json())
+                .then((data) => {
+                    let cars = data;
+                    cars.map((car) => {
+                        let carCard = document.createElement('div');
+                        carCard.classList.add('card');
+                        carCard.innerHTML = `
+                         <img src="${car.carImage}" alt="${car.carName}" />
+                         <h5>${car.carName}</h5>
+                        `;
+                        let pickItem = () => {
+                            let openCarModal = () => {
+                                carClick.style.display = "block";
+                                carImage.innerHTML = `<img src="${car.carImage}" alt="${car.carName}" />`;
+                                carInformation.innerHTML = `
+                                    <h5>${car.carName}</h5>
+                                    <p>${car.carDetails}</p>
+                                `;
+                            };
+                            let closeCarModal = () => {
+                                carClick.style.display = "none";
+                            }
+                            carCard.addEventListener('click', openCarModal);
+                            carClose.addEventListener('click', closeCarModal);
                         }
-                        carCard.addEventListener('click', openCarModal);
-                        carClose.addEventListener('click', closeCarModal);
-                    }
-                    pickItem(car.id);
-                    carContainer.appendChild(carCard);
+                        pickItem(car.id);
+                        carCategoryContainer.appendChild(carCard);
+                    })
                 })
+        }
+
+        let getAllSportsCars = (categoryId) => {
+            fetch('http://localhost:3000/cars')
+                .then(response => response.json())
+                .then((data) => {
+                    let cars = data;
+                    const sportsCar = cars.filter(car => car.categoryId === categoryId);
+                })
+        }
+
+        carForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const carName = carFormName.value;
+            const carImage = carFormImage.value;
+            const carDetails = carFormDetails.value;
+
+            const newCarItem = {
+                carName,
+                carImage,
+                carDetails
+            };
+
+            fetch('http://localhost:3000/cars', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(newCarItem)
             })
+                .then(response => response.json())
+                .then(car => console.log(car))
+        });
+        displayAllCars();
+        getAllSportsCars(1);
     }
-    displayCars();
+    displayDifferentCars();
 });

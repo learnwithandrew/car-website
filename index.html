@@ -102,17 +102,15 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form class="carSubmit-form">
-                            <label for="carImage-upload">Click to Upload Car Image</label>
-                            <input type="file" id="carImage-upload" accept="image/*" name="file" />
-                            <input type="text" placeholder="Enter car name" name="car-name" />
-                            <select id="car-category" name="car-category">
+                        <form class="carSubmit-form" id="carSubmit-form">
+                            <input type="text" placeholder="Enter car image url" id="car-image" name="carImage" />
+                            <input type="text" placeholder="Enter car name" id="car-name" name="carName" />
+                            <!-- <select id="car-category" name="categoryId">
                                 <option value="" selected disabled hidden>Choose car category</option>
-                                <option value="saab">Saab 95</option>
-                                <option value="mercedes">Mercedes SLK</option>
-                                <option value="audi">Audi TT</option>
-                            </select>
-                            <textarea placeholder="Jot down something awesome about the car..."></textarea>
+                                <option id="option" value="saab">Saab 95</option>
+                            </select> -->
+                            <textarea name="carDetails" id="car-details"
+                                placeholder="Jot down something awesome about the car..."></textarea>
                             <input type="submit" value="Submit" />
                         </form>
                     </div>
