@@ -92,21 +92,24 @@
             </div>
         </div>
 
-        <!-- Modal -->
+        <!-- Add Car Content Modal -->
         <div class="modal fade" id="addCarForm" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Add Car Form</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        ...
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Understood</button>
+                        <form>
+                            <label for="carImage-upload" class="btn carImage-upload">Click to Upload Car Image</label>
+                            <input type="file" id="carImage-upload" accept="image/*" name="file"
+                                style="display: none;" />
+                            <input type="text" placeholder="Enter car name" name="car-name" />
+                            <textarea placeholder="Jot down something awesome about the car..."></textarea>
+                            <input type="submit" value="Submit" />
+                        </form>
                     </div>
                 </div>
             </div>
@@ -116,6 +119,7 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="./assets/js/index.js"></script>
+    <script src="/asynch.js"></script>
 </body>
 
 </html>
