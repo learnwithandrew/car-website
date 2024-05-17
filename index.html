@@ -73,22 +73,23 @@
         <div id="myModal" class="carInfomodal">
             <!-- Car Modal content -->
             <div class="carModal-content">
-                <span class="close" id="modal-close" onclick="closeModal()">
+                <span class="close" id="modal-close">
                     <i class="fa fa-times" aria-hidden="true"></i>
                 </span>
-                <div class="modal-info" id="moda-info">
-                    <div class="image-container" id="modalImage-container">
+                <div class="modal-info" id="modal-info">
+                    <div class="image-container">
                         <img src="/assets//images/convertible_prev_ui.png" />
                     </div>
-                    <div class="car-information" id="carModal-information">
+                    <div class="car-information">
                         <h5>Convertible Car</h5>
                         <p>This is a convertible car.</p>
                     </div>
+                    <div class="modify-buttons" id="modify-buttons">
+                        <button type="btn button" class="delete-button" id="delete-button">Delete</button>&nbsp;
+                        <button type="btn button" id="edit-button">Edit</button>
+                    </div>
                 </div>
-                <div class="modify-buttons">
-                    <button type="btn button" id="delete-button">Delete</button>&nbsp;
-                    <button type="btn button" id="edit-button">Edit</button>
-                </div>
+
             </div>
         </div>
 
