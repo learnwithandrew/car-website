@@ -1,7 +1,34 @@
 {
   "cars": [
     {
-      "id": "cc77",
+      "id": "2",
+      "categoryId": "2",
+      "carName": "Electric car",
+      "carImage": "/assets/images/tesla_prev_ui.png",
+      "carDetails": "This is an electric car."
+    },
+    {
+      "id": "3",
+      "categoryId": "3",
+      "carName": "Minivan car",
+      "carImage": "/assets/images/minivan_prev_ui.png",
+      "carDetails": "This is a minivan car"
+    },
+    {
+      "id": "4",
+      "categoryId": 4,
+      "carName": "Convertible car",
+      "carImage": "/assets/images/convertible_prev_ui.png",
+      "carDetails": "This is a convertible car."
+    },
+    {
+      "id": "3030",
+      "carName": "Bughatti",
+      "carImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Bugatti_Chiron_1.jpg/800px-Bugatti_Chiron_1.jpg",
+      "carDetails": "This is a bughatti"
+    },
+    {
+      "id": "e446",
       "carName": "Mercedes Benz",
       "carImage": "https://imgd.aeplcdn.com/370x208/n/cw/ec/47336/e-class-exterior-right-front-three-quarter-27.jpeg?isig=0&q=80",
       "carDetails": "This is a Mercedes Benz."
