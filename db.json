@@ -1,43 +1,16 @@
 {
   "cars": [
     {
-      "id": "2",
-      "categoryId": 2,
-      "carName": "Electric car",
-      "carImage": "/assets/images/tesla_prev_ui.png",
-      "carDetails": "This is an electric car."
-    },
-    {
-      "id": "3",
-      "categoryId": 3,
-      "carName": "Minivan car",
-      "carImage": "/assets/images/minivan_prev_ui.png",
-      "carDetails": "This is a minivan car."
-    },
-    {
-      "id": "4",
-      "categoryId": 4,
-      "carName": "Convertible car",
-      "carImage": "/assets/images/convertible_prev_ui.png",
-      "carDetails": "This is a convertible car."
-    },
-    {
-      "id": "3030",
-      "carName": "Bughatti",
-      "carImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Bugatti_Chiron_1.jpg/800px-Bugatti_Chiron_1.jpg",
-      "carDetails": "This is a bughatti"
-    },
-    {
-      "id": "e446",
+      "id": "cc77",
       "carName": "Mercedes Benz",
-      "carImage": "https://www.mercedes-benz-kenya.com/media/domain/pages/slides/graph/889-wallpaper.jpg",
-      "carDetails": "This is a benz."
+      "carImage": "https://imgd.aeplcdn.com/370x208/n/cw/ec/47336/e-class-exterior-right-front-three-quarter-27.jpeg?isig=0&q=80",
+      "carDetails": "This is a Mercedes Benz."
     },
     {
-      "id": "4b05",
-      "carName": "Tesla CyberTruck",
-      "carImage": "https://media-cldnry.s-nbcnews.com/image/upload/rockcms/2024-04/240419-tesla-cybertruck-al-0821-5e2b2b.jpg",
-      "carDetails": "This is a tesla cybertruck."
+      "id": "ea18",
+      "carName": "Sports",
+      "carImage": "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?cs=srgb&dl=pexels-mikebirdy-170811.jpg&fm=jpg",
+      "carDetails": "This is a sports car"
     }
   ],
   "categories": [

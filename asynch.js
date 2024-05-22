@@ -2,8 +2,13 @@
 // setTimeout(() => console.log("during"), 8000);
 // console.log("after");
 
-// let data = () => {
-//     fetch('http://localhost:3000/cars').then(response => console.log(response))
-// }
+function fetchData(callback) {
+    setTimeout(() => {
+        const date = "Hello world!";
+        callback(date);
+    }, 1000)
+}
 
-// data();
+fetchData((data) => {
+    console.log(data);
+})
