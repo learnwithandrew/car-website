@@ -88,6 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
             deleteCarForm(id);
         } else if (e.target.classList.contains('edit-button')) {
             const id = e.target.dataset.id;
+            console.log(id)
             editCarForm(id);
         }
     })
@@ -98,58 +99,58 @@ document.addEventListener('DOMContentLoaded', () => {
             headers: {
                 'Content-Type': 'application/json'
             }
-        }).then(response => response.json()).then(data => console.log(data))
+        }).then(response => response.json()).then(data)
     }
-    
-    function editCarForm(id){
-        document.querySelector(".update-form").style.display="block";
-        document.getElementById('myModal').style.display="none";
 
-        fetch('http://localhost:3000/cars')
+    function editCarForm(id) {
+        document.querySelector(".update-form").style.display = "block";
+        document.getElementById('myModal').style.display = "none";
+
+        fetch('http://localhost:3000/cars/')
             .then(response => response.json())
             .then((data) => {
                 let cars = data;
-                
-
-                    let updateObj = cars.find(vehicle => vehicle.id === id);
-                    document.querySelector(".update_id").value = updateObj.id;
-                    document.querySelector(".ucategoryId").value = updateObj.categoryId;
-                    document.querySelector(".ucarName").value = updateObj.carName;
-                    document.querySelector(".ucarImage").value = updateObj.carImage;
-                    document.querySelector(".ucarDetails").value = updateObj.carDetails;
-                    
-               
+                let updateObj = cars.find(vehicle => vehicle.id === id);
+                console.log(updateObj)
+                document.getElementById("update-id").value = updateObj.id;
+                document.querySelector(".ucarName").value = updateObj.carName;
+                document.querySelector(".ucarImage").value = updateObj.carImage;
+                document.querySelector(".ucarDetails").value = updateObj.carDetails;
             })
-        
+
     }
 
     document.querySelector(".update-button").addEventListener("click", update)
 
-    function update(){
-        let id = parseInt(document.querySelector(".update_id").value);
-        let categoryId = document.querySelector(".ucategoryId").value;
+    function update() {
+        let id = document.getElementById("update-id").value;
         let carName = document.querySelector(".ucarName").value;
         let carImage = document.querySelector(".ucarImage").value;
         let carDetails = document.querySelector(".ucarDetails").value;
-    
-        let updateObj = {id,categoryId, carName, carImage, carDetails};
-    
-        fetch(`http://localhost:3000/cars/${updateObj.id}`,{
-            method:'PATCH',
-            headers:{
+
+        let updateObj = {
+            id,
+            carName,
+            carImage,
+            carDetails
+        };
+
+        console.log(updateObj.id)
+
+        fetch(`http://localhost:3000/cars/${updateObj.id}`, {
+            method: 'PATCH',
+            headers: {
                 'Content-Type': 'application/json'
             },
-            body:JSON.stringify(updateObj)
+            body: JSON.stringify(updateObj)
         })
-        .then(res => res.json())
-        .then(updateObj => console.log(updateObj))
-  
-                document.querySelector(".update-form").style.display="none";
-            document.getElementById('myModal').style.display="none";
-    
-    }
+            .then(res => res.json())
+            .then(updateObj => console.log(updateObj))
 
-    
+        document.querySelector(".update-form").style.display = "none";
+        document.getElementById('myModal').style.display = "none";
+
+    }
     carForm.addEventListener('submit', carPostForm);
     displayAllCars();
     getAllSportsCars(1);
