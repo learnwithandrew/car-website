@@ -2,7 +2,7 @@
   "cars": [
     {
       "id": "cc77",
-      "carName": "Mercedes Benz",
+      "carName": "Mercedes Benz ",
       "carImage": "https://imgd.aeplcdn.com/370x208/n/cw/ec/47336/e-class-exterior-right-front-three-quarter-27.jpeg?isig=0&q=80",
       "carDetails": "This is a Mercedes Benz."
     },
@@ -11,6 +11,12 @@
       "carName": "Sports car",
       "carImage": "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?cs=srgb&dl=pexels-mikebirdy-170811.jpg&fm=jpg",
       "carDetails": "This is a blue sports car"
+    },
+    {
+      "id": "bb6c",
+      "carImage": "https://newsroom.cdn.bugatti-media.com/f014c3ff-2a67-4034-912a-2028aa1841aa/lg",
+      "carName": "Bughatti",
+      "carDetails": "This is a bugatti"
     }
   ],
   "categories": [

@@ -23,6 +23,11 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
+                    <form class="d-flex search-carsForm" role="search" id="search-carsForm">
+                        <input class="form-control me-2" id="search-input" type="search" placeholder="Search cars"
+                            aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
                             <!-- Button trigger modal -->
@@ -39,7 +44,7 @@
             <div class="popular-category-section" id="category-section">
                 <h1 id="carReference-heading">All Cars</h1>
                 <div class="car-cards" id="car-cards">
-                    <!-- <div class="card" onclick="openModal()">
+                    <!-- <div class="card">
                         <img src="assets/images/sports-car_prev_ui.png" class="card-img-top" alt="car-image">
                         <div class="card-body">
                             <h5 class="card-title">Sports Car</h5>
@@ -70,8 +75,9 @@
                 </div>
             </div>
         </div>
+
+        <!-- Car Modal content -->
         <div id="myModal" class="carInfomodal">
-            <!-- Car Modal content -->
             <div class="carModal-content">
                 <span class="close" id="modal-close">
                     <i class="fa fa-times" aria-hidden="true"></i>
@@ -104,9 +110,9 @@
                     </div>
                     <div class="modal-body">
                         <form class="carSubmit-form" id="carSubmit-form">
-                            <input type="text" placeholder="Enter car image url" id="car-image" name="carImage" />
-                            <input type="text" placeholder="Enter car name" id="car-name" name="carName" />
-                            <textarea name="carDetails" id="car-details"
+                            <input type="text" placeholder="Enter car image url" id="addCar-image" name="carImage" />
+                            <input type="text" placeholder="Enter car name" id="addCar-name" name="carName" />
+                            <textarea name="carDetails" id="addCar-details"
                                 placeholder="Jot down something awesome about the car..."></textarea>
                             <input type="submit" value="Submit" />
                         </form>
@@ -115,23 +121,33 @@
             </div>
         </div>
 
-        <!-- update car form -->
-        <div class="update-form">
-            <form class="form-container">
-                <h1>Update Form</h1>
-                <input type="text" class="update-id" id="update-id" hidden>
-                <input type="text" placeholder="Enter categoryId" class="ucarName">
-                <input type="text" placeholder="Enter categoryId" class="ucarImage">
-                <input type="text" placeholder="Enter categoryId" class="ucarDetails">
-                <button class="update-button" type="button">Update</button>
-            </form>
+        <!-- Car update modal -->
+        <div id="updateCarModal" class="carUpdatemodal">
+            <div class="carModal-content">
+                <span class="close" id="updateModal-close">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </span>
+                <div class="modal-info" id="modal-info">
+                    <h1>Update Car Details</h1>
+                    <form class="carSubmit-form" id="carUpdate-form">
+                        <input type="text" id="form-id" hidden />
+                        <label for="car-image">Car Image Url</label>
+                        <input type="text" placeholder="Enter car image url" id="car-image" name="carImage" />
+                        <label for="car-name">Car Name</label>
+                        <input type="text" placeholder="Enter car name" id="car-name" name="carName" />
+                        <label for="car-details">Car Details</label>
+                        <textarea name="carDetails" id="car-details"
+                            placeholder="Jot down something awesome about the car..."></textarea>
+                        <input type="submit" value="Submit" />
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="./assets/js/index.js"></script>
-    <script src="/asynch.js"></script>
 </body>
 
 </html>
