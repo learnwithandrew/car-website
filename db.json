@@ -18,32 +18,5 @@
       "carName": "Bughatti",
       "carDetails": "This is a bugatti"
     }
-  ],
-  "categories": [
-    {
-      "id": "1",
-      "categoryName": "sports Car",
-      "categoryImage": "/assets/images/sports-car_prev_ui.png"
-    },
-    {
-      "id": "2",
-      "categoryName": "Electric Car",
-      "categoryImage": "/assets/images/tesla_prev_ui.png"
-    },
-    {
-      "id": "3",
-      "categoryName": "Minivan Car",
-      "categoryImage": "/assets/images/minivan_prev_ui.png"
-    },
-    {
-      "id": "4",
-      "categoryName": "Convertible Car",
-      "categoryImage": "/assets/images/convertible_prev_ui.png"
-    },
-    {
-      "id": "0923",
-      "carNameValue": "Bughatti",
-      "carDetailsValue": "This is a bughatti"
-    }
   ]
 }
